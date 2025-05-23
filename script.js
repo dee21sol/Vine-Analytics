@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const quoteCurrency = currencyPair.substr(3);
 
         // Validate the fields
-        if (!currencyPair || !riskAmount || !stopLoss || isNaN(riskAmount) || isNaN(stopLoss)) {
+        if (!currencyPair || riskAmount === null || riskAmount === undefined || stopLoss === null || stopLoss === undefined || isNaN(riskAmount) || isNaN(stopLoss)) {
             showError("Please fill in all fields with valid values before calculating the lot size.");
             return;
         }
